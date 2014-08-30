@@ -1,0 +1,77 @@
+(-) GET
+(*) POST
+
+- USUARIS:
+    - create -> /route/usuaris
+    - getByLogin -> /route/usuaris
+    - getLlibre -> /route/llibres
+    - getText -> /route/texts
+    - getImatge -> /route/imatges
+    - getComentaris -> /route/comentaris
+    - getGrup -> /route/grup
+    - search
+    - listElements -> /routes/usuari
+    * Canviar permis element (camp: public)
+    * Esborrar element (camp: esborrat)
+    * Modicar dades personals
+    * Donar de baixa
+    * Crear grup
+
+- IMATGES:
+    - create -> routes/imatges
+    - getById -> routes/imatges
+    - getComentaris -> routes/comentaris
+    - search -> routes/imatges
+    - searchPopular
+    - getPuntuacio -> routes/text
+    * deleteById
+    * canviar permis
+
+- TEXT:
+    - create -> route/texts
+    - getById + getPuntuacio + getComentaris -> routes/texts
+    - getComentaris -> routes/comentaris
+    - search -> route/texts
+    - searchPopular
+    * deleteById
+    * canviar permis
+
+- LLIBRE:
+    - create -> routes/llibres
+    - getById + getPuntuacio + getComentaris ->  routes/llibres
+    - getComentaris -> routes/comentaris
+    - search --> route/llibres
+    - searchPopular
+    * deleteById
+    * guardar
+    * canviar permis
+
+- TIPUS
+    - create -> routes/tipus
+    - getById -> routes/tipus
+
+- TEMATICA
+    - create -> routes/tematica
+    - getById -> routes/tematica
+
+- GRUP
+    - create -> routes/grup
+    - getByNom
+    - getUsuaris
+    - getElementsByGrup
+    * modificar dades (descripció i nom)
+
+- COMENTARI
+    - create -> routes/comentaris
+    - getById
+    * esborrar comentari (camp:esborrar)
+
+- PUNTUACIO
+    - create
+    * setPuntuacio (also modify)
+
+
+- UPDATE PUNTUACIO
+   - TEXT
+   - LLIBRE
+   - IMATGE

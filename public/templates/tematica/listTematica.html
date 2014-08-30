@@ -1,0 +1,10 @@
+<div class="list-group">
+    <a class="list-group-item tematica active"><input type="hidden" value="-1"/>Totes</a>
+    <%
+    items.each(function(item,key,list) {
+    %>
+    <a class="list-group-item tematica"><input type="hidden" value="<%= item.get('codi')%>"/><%= item.get('nom')%></a>
+    <%
+    });
+    %>
+</div>

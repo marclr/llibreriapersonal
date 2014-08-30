@@ -1,0 +1,39 @@
+<div class="col-md-10">
+    <div class="thumbnail" id="editLlibre">
+        <input type="hidden" name="codi" value="<%=llibre.get('codi')%>"/>
+        <img src="<%= llibre.get('ruta') %>" alt="<%=llibre.get('titol') %>"/>
+        <div class="caption">
+            <p>Titol: </p>
+            <h3 class="text-center"><input type="text" class="form-control text-center" name="titol" value="<%=llibre.get('titol') %>"/></h3>
+            <br>
+            <p>Descripció: </p>
+            <p><textarea name="descripcio" id="descripcio" class="form-control"><%=llibre.get('descripcio') %></textarea></p>
+            <br>
+            <p>Escull les temàtiques del llibre:</p>
+            <%
+            tematiques.each(function(tematica,key,list) {
+            %>
+            <input name="tematica" type="checkbox" value ="<%=tematica.get('codi')%>"/> <span><%= tematica.get('nom') %></span>
+            <%
+            });
+            %>
+            <br>            <br>
+            <p>Selecciona la visibilitat del llibre:</p>
+            <select class="form-control" name="public">
+                <% if(llibre.get('public')) { %>
+                <option value="1" selected>Public</option>
+                <option value="0">Privat</option>
+                <% } else { %>
+                <option value="1">Public</option>
+                <option value="0" selected>Privat</option>
+                <% } %>
+            </select>
+            <br>
+            <button class="btn btn-success center-block pull-left update">Actualitzar</button>
+            <button class="btn btn-danger center-block pull-right delete">Esborrar</button>
+            <button class="btn btn-default center-block back">Tornar al llistat de llibres</button>
+        </div>
+    </div>
+
+</div>
+

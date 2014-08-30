@@ -1,0 +1,20 @@
+<div class="row">
+    <div id="llistaLlibres">
+        <%
+        items.each(function(item,key,list) {
+        %>
+            <div class="col-lg-4 col-sm-6 col-xs-12 llibre">
+                <div class="thumbnail">
+                    <img src="<%=item.get('ruta')%>" class="llistaImatges img-responsive">
+                    <input type="hidden" value="<%=item.get('codi')%>">
+                    <p class="text-center"><%=item.get('titol')%></p>
+                </div>
+            </div>
+        <%
+        });
+        %>
+    </div>
+    <div id="options" class="row">
+    </div>
+</div>
+

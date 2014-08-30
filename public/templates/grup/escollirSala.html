@@ -1,0 +1,13 @@
+<h4>Sales on et pots unir:</h4>
+<br>
+<div class="multicolumn">
+<%
+    for(var k in sales) {
+        if(k.slice(1)!="") {
+%>
+    <p class="panel panel-default unir"><input type="hidden" value="<%= k.slice(1) %>"/><%= k.slice(1) %></p>
+<%
+        }
+    };
+%>
+</div>

@@ -1,0 +1,33 @@
+<hr>
+<p class="btn-link btn-comentari"><b>+ Afegir comentari</b></p>
+<div id="textareaWrap" style="display:none;">
+    <br>
+    <div class="missatge-error"></div>
+    <textarea  id="wall" class="form-control"></textarea>
+    <div id="sharebtn">
+        <a class="button Share" id="shareButton">Afegir comentari</a>
+    </div>
+   </div>
+<br>
+<p><b>Comentaris:</b></p>
+<div class="llistaComentaris">
+<%
+    var item=null;
+    for(var i=0;i<comentaris.length;i++) {
+        item = comentaris.at(i);
+        var d = new Date(item.get('createdAt'));
+        %>
+        <div class="comentari"><b>
+        <%= item.get('UsuariId') %>
+        </b><div class="pull-right">
+        <%= d.toUTCString() %>
+        </div>
+        <br>
+        <%= item.get('text') %>
+        </div>
+        <hr>
+        <br>
+        <%
+    }
+%>
+</div>

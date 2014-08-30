@@ -1,0 +1,17 @@
+<div class="list-group">
+    <%
+    items.each(function(item,key,list) {
+    if(sel == item.get('codi')) {
+    %>
+    <a class="list-group-item tipus active"><input type="hidden" value="<%= item.get('codi')%>"/><%= item.get('descripcio')%></a>
+    <%
+    }
+    else
+    {
+    %>
+    <a class="list-group-item tipus"><input type="hidden" value="<%= item.get('codi')%>"/><%= item.get('descripcio')%></a>
+    <%
+    }
+    });
+    %>
+</div>

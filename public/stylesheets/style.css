@@ -1,0 +1,324 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*    Text enriquit  */
+#myInstance1 {
+    border: 2px dashed #0000ff;
+}
+.nicEdit-selected {
+    border: 2px solid #0000ff !important;
+}
+
+.nicEdit-panel {
+    background-color: #fff !important;
+}
+
+.nicEdit-button {
+    background-color: #fff !important;
+}
+
+.llistaImatges {
+    height: 175px;
+    width: 230px;
+}
+
+.myImatges{
+    height: 525px;
+    width: 690px;
+}
+
+.modal-dialog {width:600px;}
+.thumbnail {margin-bottom:6px;}
+
+.missatge-error {
+    color: #8B0000;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    overflow: hidden;
+}
+
+.missatge-success {
+    color: #3d8b27;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    overflow: hidden;
+}
+
+
+/* Estils per seleccionar el contingut del llibre*/
+.selected {
+    border-width: 2px;
+    border-style: dotted;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    background: #72ee49;
+    color: #444;
+    list-style:none;
+    cursor:pointer;
+}
+
+.not-selected {
+    border-width: 2px;
+    border-style: dotted;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px;
+    background: #DAEED2;
+    color: #444;
+    list-style:none;
+    cursor:pointer;
+}
+
+.in-index {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+
+#columna1 {
+   /* font-size: 34pt;*/
+}
+
+#text {
+    background: #def3ca;
+    margin: 3px;
+    width: 80px;
+    display: none;
+    float: left;
+    text-align: center;
+}
+
+#textArea {
+ width: 100%;
+ height: 100%;
+}
+
+.block {
+    margin: 0px auto;
+    width: 600px;
+}
+
+/*camps obligatoris --> punt vermell*/
+label.required:before {
+    content: "•";
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+    color: #D40000;
+    padding-right: 3px;
+}
+
+
+.mandatory-fields-notice {
+    background-color: #EEF7FB;
+    height: 22px;
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    color: #262626;
+    line-height: 20px;
+    padding-right: 6px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.showPreview {
+    float: left;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.btn.a {
+    border-color: #4081AF #2E69A3 #20559A;
+    color: #FFF;
+    text-shadow: 0px -1px 1px #3275BC;
+    background: #377AD0;
+}
+
+
+#menusEditor{
+    border: 1px solid #ddd !important;
+    padding: 10px !important;
+    border-radius: 15px !important;
+    width: 650px;
+    margin-left: 150px;
+    margin-top: -40px;
+}
+
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+    .fileinput-button input {
+        filter: alpha(opacity=0);
+        font-size: 100%;
+        height: 100%;
+    }
+}
+
+/* Comentaris */
+#wrapper {
+    width:800px;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto
+}
+.Share.button, .Share.button:visited {
+    background-color: #5B74A8;
+    border-color: #29447E #29447E #1A356E;
+    border:1px solid #999;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border : 0px;
+    float:right;
+    margin-right:10px;
+}
+#sharebtn {
+    padding:20px 5px;
+}
+#textareaWrap {
+    text-align: center;
+    background-color: #F2F2F2;
+    height:130px;
+    border:solid 1px #B4BBCD;
+}
+
+.comentari {
+}
+
+div.multicolumn {
+    -moz-column-count: 4;
+    -moz-column-gap: 25%;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 25%;
+    column-count: 4;
+    column-gap: 25%;
+}
+
+.unir {
+    cursor:pointer;
+}
+.textbox {
+    height: 300px;
+    background-color: #154d64;
+    overflow: auto;
+    margin: 5px 0;
+    color:white;
+}
+
+
+.list-group-item{
+    cursor:pointer;
+}
+.imatge {
+    cursor:pointer;
+}
+.imatge:hover{
+    -o-box-shadow: 2px 2px 19px rgba(16, 9, 27, 0.69);
+    -webkit-box-shadow: 2px 2px 19px #10091b;
+    -moz-box-shadow: 2px 2px 19px #10091b;
+}
+.llibre {
+    cursor:pointer;
+}
+.llibre:hover{
+    -o-box-shadow: 2px 2px 19px rgba(16, 9, 27, 0.69);
+    -webkit-box-shadow: 2px 2px 19px #10091b;
+    -moz-box-shadow: 2px 2px 19px #10091b;
+}
+.text {
+    cursor:pointer;
+}
+.text:hover{
+    -o-box-shadow: 2px 2px 19px rgba(16, 9, 27, 0.69);
+    -webkit-box-shadow: 2px 2px 19px #10091b;
+    -moz-box-shadow: 2px 2px 19px #10091b;
+}
+
+/*Star Rating*/
+.form {
+    margin:0;
+}
+
+.form div {
+    list-style:none;
+    margin-left: auto;
+    width:160px;
+
+}
+
+.hide {
+    display:none;
+}
+
+.rating input[type="radio"] {
+    position:absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity:0;
+    cursor:pointer;
+    width:17px;
+}
+
+.rating span {
+    width:24px;
+    height:16px;
+    line-height:16px;
+    padding:1px 22px 1px 0; /* 1px FireFox fix */
+    background:url(../img/vistes/star.png) no-repeat -22px 0; /* Force all spans to have "checked" background */
+}
+
+.rating input[type="radio"]:checked + span { /* Change span immediately following the checked radio */
+    background-position:-22px 0;
+}
+
+.rating input[type="radio"]:checked + span ~ span { /* Reset all remaining stars back to default background. This supersedes the above due to its ordering. */
+    background-position:0 0;
+}

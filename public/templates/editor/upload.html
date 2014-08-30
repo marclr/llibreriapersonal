@@ -1,0 +1,33 @@
+<div id="fileupload" class = "col-sm-10">
+    <strong id="feedback" class="missatge-error"></strong>
+    <div class="mandatory-fields-notice center-block">
+        Tots els camps marcats amb <label class="required"></label>
+        <span> són obligatoris </span>
+    </div>
+    <label class="required">Titol: </label> <br><input type="text" name="titol" size="126" class="form-control" placeholder="Escriu un titol"><br><br>
+    <label class="required">Descripció:</label> <br><textarea name="descripcio" id="editor" class="form-control" placeholder="Escriu una descripció" rows="5" cols="95" ></textarea><br><br>
+    <label class="required">Imatge: </label><br>
+    <span class="btn btn-default fileinput-button">Afegir imatge
+        <input id='file' type='file' name='files[]' data-url="/imatges" multiple>
+    </span>
+    <div id="files" class="files"></div>
+    <div id="progress" class="progress">
+        <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <label class="required"> Escull les temàtiques del llibre:</label></p>
+    <%
+    tematiques.each(function(tematica,key,list) {
+    %>
+    <input name="tematica" type="checkbox" value ="<%=tematica.get('codi')%>"><span><%= tematica.get('nom') %></span>
+    <%
+    });
+    %>
+    <br><br><br>
+    <p><b>Tria la visibilitat del llibre:</b></p>
+    <select name="public" class="form-control">
+        <option value="1" selected>Públic</option>
+        <option value="0">Privat</option>
+    </select>
+    <br>
+    <button class="btn btn-success" id="cargarImatge">Guardar imatge</button>
+</div>

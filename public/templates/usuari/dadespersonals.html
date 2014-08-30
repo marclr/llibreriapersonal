@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Dades personals:</div>
+    <div class="panel-body" id="panelDades">
+        <p id="resultat"></p>
+        <p>Aquesta és la teva pàgina personal. Probablement voldries canviar algunes coses. Si desitges perdre una estona, aquest és el lloc indicat.</p>
+        <strong>Nom:</strong>
+        <input type="text" value="<%= item.get('nom')%>" name="nom" class="form-control">
+        <br>
+        <strong>Cognom:</strong>
+        <input type="text" value="<%= item.get('cognom')%>" name="cognom" class="form-control">
+        <br>
+        <strong>Correu electrònic:</strong>
+        <input type="text" value="<%= item.get('email')%>" name="email" class="form-control">
+        <br>
+        <strong>Telèfon:</strong>
+        <input type="text" value="<%= item.get('telefon')%>" name="telefon" class="form-control">
+        <br>
+        <strong>Sexe:</strong>
+        <select name="sexe" class="form-control">
+            <%
+            if(item.get('sexe')){%>
+                <option value="true" selected>Home</option>
+                <option value="false">Dona</option>
+            <%}
+            else {%>
+                <option value="true">Home</option>
+                <option value="false" selected>Dona</option>
+            <%}
+            %>
+
+        </select>
+        <!--<input type="text" value="<%= item.get('sexe')%>" name="sexe" class="form-control">-->
+        <br>
+        <strong>País:</strong>
+        <input type="text" value="<%= item.get('pais')%>" name="pais" class="form-control">
+        <br>
+        <strong>Ciutat:</strong>
+        <input type="text" value="<%= item.get('ciutat')%>" name="ciutat" class="form-control">
+        <br>
+        <strong>Codi postal:</strong>
+        <input type="text" value="<%= item.get('codi_postal')%>" name="codi_postal" class="form-control">
+        <br>
+        <strong>Adreça:</strong>
+        <input type="text" value="<%= item.get('adreca')%>" name="adreca" class="form-control">
+        <br>
+        <button class="btn btn-success" id="updateDades">Actualitzar canvis</button>
+    </div>
+</div>

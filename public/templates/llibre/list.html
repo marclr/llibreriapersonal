@@ -1,0 +1,50 @@
+<div class="row col-sm-10" id="columna1">
+    <%
+    items.each(function(item,key,list) {
+    %>
+    <div class="panel panel-default">
+        <div class="panel-body llibre">
+            <div class="col-sm-3">
+                <img src="<%= item.get('ruta') %>" alt="<%= item.get('titol') %>">
+            </div>
+            <div class="form">
+                <div class="rating">
+                    <input name="puntuacio" value="0" checked="" type="radio"><span class="hide"></span>
+                    <input name="puntuacio" value="1" type="radio"><span></span>
+                    <input name="puntuacio" value="2" type="radio"><span></span>
+                    <input name="puntuacio" value="3" type="radio"><span></span>
+                    <input name="puntuacio" value="4" type="radio"><span></span>
+                    <input name="puntuacio" value="5" type="radio"><span></span>
+                </div>
+            </div>
+            <div>
+                <input type="hidden" value="<%= item.get('codi') %>" name="codi">
+                <strong>Titol: </strong><div id="titol"><%= item.get('titol') %></div>
+                <br>
+                <strong>Autor: </strong><div id="autor"><%= item.get('UsuariId') %></div>
+                <br>
+                <strong>Argument: </strong><div id="descripcio"><%= item.get('descripcio') %></div>
+            </div>
+        </div>
+    </div>
+    <%
+    });
+    %>
+</div>
+<div id="contingutLlibre" class="col-sm-8 panel panel-default" style="display:none">
+    <div id="close" class="pull-right close">×</div>
+    <h1 id="titol_element"></h1>
+    <input type="hidden" id="codi_element"/>
+    <div class="form">
+        <div class="rating">
+            <input name="puntuacio" value="0" checked="" type="radio"><span class="hide"></span>
+            <input name="puntuacio" value="1" type="radio"><span></span>
+            <input name="puntuacio" value="2" type="radio"><span></span>
+            <input name="puntuacio" value="3" type="radio"><span></span>
+            <input name="puntuacio" value="4" type="radio"><span></span>
+            <input name="puntuacio" value="5" type="radio"><span></span>
+        </div>
+    </div>
+    <p id="text_element"></p>
+    <div id="comentaris"></div>
+</div>

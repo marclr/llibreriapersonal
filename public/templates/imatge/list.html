@@ -1,0 +1,46 @@
+<div class="col-sm-10">
+    <ul class="list-group" id="columna1">
+        <%
+        for(var i = 0; i<items.length;i=i+1){
+        var item = items.at(i);
+        %>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <a title="<%= item.get('titol') %>"  alt="<%=item.get('descripcio')%>">
+                <img class="thumbnail img-responsive llistaImatges imatge" src="<%= item.get('ruta') %>">
+                <input type="hidden" value="<%= item.get('codi') %>">
+            </a>
+        </div>
+        <%
+        };
+        %>
+    </ul>
+</div>
+
+<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">×</button>
+                <h3 class="modal-title">Heading</h3>
+                <input type="hidden" id="codi_element"/>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="form">
+                <div class="rating">
+                    <input name="puntuacio" value="0" checked="" type="radio"><span class="hide"></span>
+                    <input name="puntuacio" value="1" type="radio"><span></span>
+                    <input name="puntuacio" value="2" type="radio"><span></span>
+                    <input name="puntuacio" value="3" type="radio"><span></span>
+                    <input name="puntuacio" value="4" type="radio"><span></span>
+                    <input name="puntuacio" value="5" type="radio"><span></span>
+                </div>
+            </div>
+            <div id="comentaris" style="position:relative;padding:20px"></div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

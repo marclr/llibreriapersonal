@@ -1,0 +1,17 @@
+<div class="row">
+    <div id="llistaText">
+        <ul class="list-group">
+            <%
+            items.each(function(item,key,list) {
+            %>
+            <li class="list-group-item text">
+                <input type="hidden" value="<%=item.get('codi')%>">
+                <strong>Titol: </strong><%= item.get('titol') %></li>
+            <%
+            });
+            %>
+        </ul>
+    </div>
+    <div id="options" class="row">
+    </div>
+</div>

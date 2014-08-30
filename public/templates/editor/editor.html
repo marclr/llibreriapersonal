@@ -1,0 +1,33 @@
+<div id = "crearText" class="col-sm-10">
+    <strong id="feedback" class="missatge-error"></strong>
+    <div class="mandatory-fields-notice center-block">
+        Tots els camps marcats amb <label class="required"></label>
+        <span> són obligatoris </span>
+    </div>
+    <label class="required">Titol: </label> <br><input type="text" name="titol" size="126" class="form-control" placeholder="Escriu un titol"><br><br>
+    <label class="required">Descripció:</label> <br><textarea name="descripcio" id="editor" class="form-control" placeholder="Escriu una descripció" rows="5" cols="95" ></textarea><br><br>
+    <label class="required">Escriu un text: </label>
+    <textarea name="text" id="editor1" placeholder="Comença a esciure"></textarea><br>
+    <label class="required">Escull les temàtiques del text: </label> <br>
+
+    <%
+    tematiques.each(function(tematica,key,list) {
+    %>
+    <input name="tematica" type="checkbox" value ="<%=tematica.get('codi')%>"/> <span><%= tematica.get('nom') %></span>
+    <%
+    });
+    %>
+    <br><br>
+    <p><b>Tria la visibilitat del llibre:</b></p>
+    <select name="public">
+        <option value="1" selected>Públic</option>
+        <option value="0">Privat</option>
+    </select><br><br>
+    <p class="panell-butons">
+        <input type="button" id="guardarText" class ="btn btn-success" value="Guardar text">
+    </p>
+</div>
+
+
+
+
